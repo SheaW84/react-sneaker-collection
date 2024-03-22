@@ -6,7 +6,7 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import useGetData from "../custom-hooks/FetchData";
 
 const columns: GridColDef[]=[
-    { field: 'id', headerName:'ID', width:90, hideable:true },
+    { field: 'id', headerName:'ID', width:90, hide:true },
     { field: 'brand', headerName:'Brand', flex: 1 },
     { field: 'sneaker_name', headerName:'Sneaker Name',flex: 1 },
     { field: 'athletic_style', headerName:'Athletic Style', flex: 1 },
@@ -34,7 +34,9 @@ function DataTable() {
     //  TODO: setTimeout( () => {window.location.reload()}, 500)
   }
   return (
-    <div>
+    <div
+    
+        >
        <Modal 
             id={selectionModel}
             open={open}
@@ -43,27 +45,27 @@ function DataTable() {
         <div className="flex flex-row">
             <div>
                 <button
-                    className="p-3 bg-slate-300 rounded m-3 hover:bg-green-800 hover:text-white
+                    className="p-3 bg-slate-300 rounded m-4 ml-10 hover:bg-green-800 hover:text-white
                     shadow-sm shadow-white hover:shadow-lg hover:shadow-green-400"
                     onClick={() => handleOpen()}
                 >
-                    Add New Car
+                    Add New Sneaker
                 </button>
             </div> 
             <Button onClick={ handleOpen } className="p-3 bg-slate-300 rounded m-3 hover:bg-yellow-800 hover:text-white
-            shadow-sm shadow-white hover:shadow-lg hover:shadow-yellow-400">Update Car</Button>
+            shadow-sm shadow-white hover:shadow-lg hover:shadow-yellow-400">Update Sneaker</Button>
             <Button onClick={ deleteData } className="p-3 bg-slate-300 rounded m-3 hover:bg-red-800 hover:text-white
-            shadow-sm shadow-white hover:shadow-lg hover:shadow-red-400" >Delete Car</Button>
+            shadow-sm shadow-white hover:shadow-lg hover:shadow-red-400" >Delete Sneaker</Button>
         </div>
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col" }
             style={{ height: 400, width: '100%'}}>
                 <div className="justify-center">
-                    <h2 className="p-3 bg-slate-800 text-white my-2 rounded font-display">My Cars</h2>
+                    <h2 className="p-3 bg-slate-800 text-white my-2 rounded font-display">Your Sneakers</h2>
                 </div>
             <DataGrid 
-            rows={sneakerData} columns={columns} pageSizeOptions={[5]}
+            rows={sneakerData} columns={columns} rowsPerPageOptions={[5]}
             checkboxSelection={true} 
-            onRowSelectionModelChange={ (item:any) => {
+            onSelectionModelChange={ (item:any) => {
                 setSelectionModel(item)
             }}
             sx={{
