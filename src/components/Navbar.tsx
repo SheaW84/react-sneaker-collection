@@ -25,10 +25,10 @@ function Navbar() {
     }
 
   return (
-  <div className='relative w-full bg-slate-700 shadow-sm '>
+  <div className='sticky bg-slate-700 w-full '>
     <nav className='flex items-center justify-between flex-wrap p-3'>
     <div className='flex flex-shrink-0 text-white mr-0'>
-        <Link to='/' className='font-normal text-xl tracking-tight m-5 font-display'>Sneaker Collection</Link>
+        <Link to='/' className='font-normal text-xl tracking-tight m-3 font-display'>Sneaker Collection</Link>
     </div>
     <div className='block'>
         <button onClick={dropDown} className='flex place-items-end px-3 py-2 text-gray-200 border rounded 

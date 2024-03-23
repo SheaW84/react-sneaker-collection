@@ -16,14 +16,14 @@ const Modal = ( props:Props) => {
         
         >
             <div
-                className='max-w-500px w-2/5 fixed flex z-1 mt-5 bg-white shadow-xl rounded'
+                className='max-w-500px w-2/5 fixed flex z-1 mt-1 bg-white shadow-xl rounded'
                 onClick={(e) => {
                     e.stopPropagation()
                 }}
             >
                 <div className="w-full flex flex-col">
                     <div className="flex flex-row space-apart">
-                        <button className="flex justify-start  bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
+                        <button className="flex justify-start m-1 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
                         onClick={props.onClose}>
                             <span className="material-symbols-outlined">close</span>
                         </button>

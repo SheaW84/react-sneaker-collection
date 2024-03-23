@@ -60,7 +60,7 @@ const SneakerForm = ( props: SneakerFormProps) => {
                     <Input {...register('season')} name ='season' placeholder="Season"/>
                 </div>
                 <div className="flex p-1">
-                    <Button className="flex justify-start m-3 bg-gray-600 p-2 rounded hover:bg-gray-800 text-white">
+                    <Button className="flex justify-start m-1 bg-gray-600 p-2 rounded hover:bg-blue-700 text-white">
                         Submit
                     </Button>
                 </div>

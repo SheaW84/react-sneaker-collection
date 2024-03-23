@@ -31,7 +31,7 @@ function DataTable() {
       server_calls.delete(selectionModel[0])
       getData();
       console.log(`Selection model: ${selectionModel}`)
-    //  TODO: setTimeout( () => {window.location.reload()}, 500)
+        setTimeout( () => {window.location.reload()}, 500)
   }
   return (
     <div
@@ -45,22 +45,22 @@ function DataTable() {
         <div className="flex flex-row">
             <div>
                 <button
-                    className="p-3 bg-slate-300 rounded m-4 ml-10 hover:bg-green-800 hover:text-white
-                    shadow-sm shadow-white hover:shadow-lg hover:shadow-green-400"
+                    className="p-3 border text-white rounded m-3 ml-10 hover:bg-green-800 hover:text-white
+                    shadow-sm shadow-white hover:shadow-lg hover:shadow-green-400 hover:border-green-800"
                     onClick={() => handleOpen()}
                 >
                     Add New Sneaker
                 </button>
             </div> 
-            <Button onClick={ handleOpen } className="p-3 bg-slate-300 rounded m-3 hover:bg-yellow-800 hover:text-white
-            shadow-sm shadow-white hover:shadow-lg hover:shadow-yellow-400">Update Sneaker</Button>
-            <Button onClick={ deleteData } className="p-3 bg-slate-300 rounded m-3 hover:bg-red-800 hover:text-white
-            shadow-sm shadow-white hover:shadow-lg hover:shadow-red-400" >Delete Sneaker</Button>
+            <Button onClick={ handleOpen } className="p-3 border text-white rounded m-3 hover:bg-yellow-800 hover:text-white
+            shadow-sm shadow-white hover:shadow-lg hover:shadow-yellow-400 hover:border-yellow-800">Update Sneaker</Button>
+            <Button onClick={ deleteData } className="p-3 border text-white rounded m-3 hover:bg-red-800 hover:text-white
+            shadow-sm shadow-white hover:shadow-lg hover:shadow-red-400 hover:border-red-800" >Delete Sneaker</Button>
         </div>
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col" }
             style={{ height: 400, width: '100%'}}>
-                <div className="justify-center">
-                    <h2 className="p-3 bg-slate-800 text-white my-2 rounded font-display">Your Sneakers</h2>
+                <div className="justify-self-center">
+                    <h2 className="p-3 text-white my-2 rounded font-display text-center text-5xl">Your Sneakers</h2>
                 </div>
             <DataGrid 
             rows={sneakerData} columns={columns} rowsPerPageOptions={[5]}
@@ -69,7 +69,7 @@ function DataTable() {
                 setSelectionModel(item)
             }}
             sx={{
-                borderColor:'',
+                borderColor:'primary.light',
                 color:'primary.light'
             }}
             />
