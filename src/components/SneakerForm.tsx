@@ -22,7 +22,7 @@ const SneakerForm = ( props: SneakerFormProps) => {
         if (props.id && props.id.length > 0) {
             server_calls.update(props.id[0], data)
             console.log(`Updated: ${ data } ${ props.id }`)
-            // setTimeout(() => {window.location.reload()}, 1000);
+            setTimeout(() => {window.location.reload()}, 1000);
             event.target.reset();
         }else{
             dispatch(chooseBrand(data.brand));
@@ -32,7 +32,7 @@ const SneakerForm = ( props: SneakerFormProps) => {
             dispatch(chooseSeason(data.season));
 
             server_calls.create(store.getState())
-            // setTimeout(() => {window.location.reload()}, 1000)
+            setTimeout(() => {window.location.reload()}, 1000)
         }
     }
 
