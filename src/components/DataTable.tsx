@@ -33,6 +33,7 @@ function DataTable() {
       console.log(`Selection model: ${selectionModel}`)
         setTimeout( () => {window.location.reload()}, 500)
   }
+
   return (
     <div
     

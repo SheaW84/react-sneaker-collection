@@ -30,15 +30,7 @@ function Navbar() {
     <div className='flex flex-shrink-0 text-white mr-0'>
         <Link to='/' className='font-normal text-xl tracking-tight m-3 font-display'>Sneaker Collection</Link>
     </div>
-    <div className='block'>
-        <button onClick={dropDown} className='flex place-items-end px-3 py-2 text-gray-200 border rounded 
-        border-gray-400  hover:text-white hover:border-white transition ease-in-out 
-        delay-150 hover:translate-y-1 hover:scale-120' data-dropdown-toggle="dropdown">
-            <i className='fas fa-bars'></i>
-        </button>
-    </div>
-    { isVisible ? (
-    <div className='z-10 w-full flex-grow items-end'>
+    <div className='z-10 w-1/2 flex-grow items-end'>
         <div className="text-sm lg:flex-grow"> 
             <Button className='p-3 m-5'>
                 <div>
@@ -92,7 +84,7 @@ function Navbar() {
                 </Button>
             }
         </div>
-    </div>) : (<></>) }
+    </div>
     </nav> 
     </div>
    
