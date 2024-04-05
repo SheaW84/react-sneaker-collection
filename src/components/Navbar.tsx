@@ -16,9 +16,6 @@ function Navbar() {
         loginWithRedirect();
     }
     
-    const dropDown = () => {
-        setIsVisible(!isVisible)
-    }
 
     const clicked = () => {
         setIsVisible(false)
@@ -30,8 +27,8 @@ function Navbar() {
     <div className='flex flex-shrink-0 text-white mr-0'>
         <Link to='/' className='font-normal text-xl tracking-tight m-3 font-display'>Sneaker Collection</Link>
     </div>
-    <div className='z-10 w-1/2 flex-grow items-end'>
-        <div className="text-sm lg:flex-grow"> 
+    <div className='flex z-10 w-1/2'>
+        <div className="text-sm lg:flex-grow flex justify-end"> 
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
