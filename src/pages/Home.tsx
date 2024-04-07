@@ -6,7 +6,7 @@ function Home() {
     className='flex flex-row justify-center mx-auto bg-cover bg-fixed bg-slate-700 bg-blend-multiply'
     >
       <div className='flex place-items-center h-screen'>
-        <h1 className='p-4 text-6xl text-white font-display animate__animated animate__bounce'>Your Sneaker Collection</h1>
+        <h1 className='p-4 text-6xl text-white font-display transition duration-0 ease-in-out hover:duration-300'>Your Sneaker Collection</h1>
       </div>
       
     </div>
