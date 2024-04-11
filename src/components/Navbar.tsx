@@ -32,7 +32,7 @@ function Navbar() {
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
-                    text-gray-200 hover:text-blue-600 mr-1'>
+                    text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">home</span>
                         <div>Home</div>
                     </Link>
@@ -41,7 +41,7 @@ function Navbar() {
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/about' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
-                    text-gray-200 hover:text-blue-600 mr-1'>
+                    text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">question_mark</span>
                         <div>About</div>
                     </Link>
@@ -51,7 +51,7 @@ function Navbar() {
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/dashboard' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
-                    text-gray-200 hover:text-blue-600 mr-1'>
+                    text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">dashboard</span>
                         <div>Dashboard</div>
                     </Link>
@@ -62,7 +62,7 @@ function Navbar() {
                 <Button className='p-3 m-5'>
                     <div>
                         <Link to='/' onClick={ ()=>{signInOnClick()}} className='flex place-items-center mt-4 lg:inline-block 
-                            lg:mt-0 text-gray-200 hover:text-blue-600 mr-1'>
+                            lg:mt-0 text-gray-500 hover:text-white mr-1'>
 
                             <span className="material-symbols-outlined">login</span>
                             <div>Login</div>
