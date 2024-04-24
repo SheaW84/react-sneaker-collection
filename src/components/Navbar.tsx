@@ -1,11 +1,11 @@
-import { useState }from 'react';
+// import { useState }from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
 function Navbar() {
-    const [isVisible, setIsVisible] = useState(false);
+    // const [isVisible, setIsVisible] = useState(false);
     const { isAuthenticated, loginWithRedirect, logout} = useAuth0();
 
     const signOutOnClick = () => {
@@ -17,9 +17,9 @@ function Navbar() {
     }
     
 
-    const clicked = () => {
-        setIsVisible(false)
-    }
+    // const clicked = () => {
+    //     setIsVisible(false)
+    // }
 
   return (
   <div className='sticky bg-slate-700 w-full '>
@@ -31,7 +31,7 @@ function Navbar() {
         <div className="text-sm lg:flex-grow flex justify-end"> 
             <Button className='p-3 m-5'>
                 <div>
-                    <Link to='/' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
+                    <Link to='/' className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
                     text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">home</span>
                         <div>Home</div>
@@ -40,7 +40,7 @@ function Navbar() {
             </Button>
             <Button className='p-3 m-5'>
                 <div>
-                    <Link to='/about' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
+                    <Link to='/about' className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
                     text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">question_mark</span>
                         <div>About</div>
@@ -50,7 +50,7 @@ function Navbar() {
          
             <Button className='p-3 m-5'>
                 <div>
-                    <Link to='/dashboard' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
+                    <Link to='/dashboard'  className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
                     text-gray-500 hover:text-white mr-1'>
                         <span className="material-symbols-outlined">dashboard</span>
                         <div>Dashboard</div>
@@ -73,7 +73,7 @@ function Navbar() {
                 <Button className='p-3 m-5'>
                     <div>
                         <Link to='/' onClick={ ()=>{signOutOnClick()}} className='flex place-itmes-center mt-4 lg:inline-block 
-                            lg:mt-0 text-gray-200 hover:text-blue-600 mr-1'>
+                            lg:mt-0 text-gray-500 hover:text-white mr-1'>
                             <span className="material-symbols-outlined">logout</span>
                             <div>Logout</div>
                         </Link>
