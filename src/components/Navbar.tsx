@@ -1,11 +1,10 @@
-// import { useState }from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
 function Navbar() {
-    // const [isVisible, setIsVisible] = useState(false);
+
     const { isAuthenticated, loginWithRedirect, logout} = useAuth0();
 
     const signOutOnClick = () => {
@@ -16,11 +15,6 @@ function Navbar() {
         loginWithRedirect();
     }
     
-
-    // const clicked = () => {
-    //     setIsVisible(false)
-    // }
-
   return (
   <div className='sticky bg-slate-700 w-full '>
     <nav className='flex items-center justify-between flex-wrap p-3'>
